@@ -9,13 +9,6 @@ class script(object):
 /help - 𝗀𝖾𝗍 𝗍𝗁𝗂𝗌 𝗁𝖾𝗅𝗉 𝗆𝖾𝗌𝗌𝖺𝗀𝖾
 /about - 𝖺𝖻𝗈𝗎𝗍 𝗆𝖾
 """
-    GTRANS_TXT = """<b>𝖳𝗋𝖺𝗇𝗌𝗅𝖺𝗍𝗈𝗋</b>
-- 𝖳𝗋𝖺𝗇𝗌𝗅𝖺𝗍𝖾 𝗍𝖾𝗑𝗍𝗌 𝗍𝗈 𝖺 𝗌𝗉𝖾𝖼𝗂𝖿𝗂𝖼 𝗅𝖺𝗇𝗀𝗎𝖺𝗀𝖾!
-<b>𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌 𝖺𝗇𝖽 𝖴𝗌𝖺𝗀𝖾:</b>
-- /tr [language code][reply] - 𝖳𝗋𝖺𝗇𝗌𝗅𝖺𝗍𝖾 𝗋𝖾𝗉𝗅𝗂𝖾𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗍𝗈 𝗌𝗉𝖾𝖼𝗂𝖿𝗂𝖼 𝗅𝖺𝗇𝗀𝗎𝖺𝗀𝖾.
-
-𝖬𝖺𝖽𝖾 𝖻𝗒 @SakuraBotUpdates ❤️
-"""
     ABOUT_TXT = """
 ○ 𝖬𝗒 𝖭𝖺𝗆𝖾 : 𝖲𝖺𝗄𝗎𝗋𝖺
 ○ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋 : <a href='https://t.me/paulwalker_tg'>PaulWalker</a>
@@ -35,13 +28,6 @@ class script(object):
 CODES:
 1. Auto Filter
 2. Group Managing  
-"""
-    TTS_TXT = """<b>TEXT TO SPEACH</b>
-Simple Telegram Text-To-Speech Module.
-It can use the following as speech synthesis engines:
-
-Amazon's Polly engine
-Google's TTS engine by way of the gTTS library
 """
     COVID_TXT = """<b><u>𝖢𝗈𝗏𝗂𝖽 19 𝗂𝗇𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇</u><b/>
 𝖢𝗈𝗋𝗈𝗇𝖺 𝗂𝗇𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇 𝗈𝖿 𝗒𝗈𝗎𝗋 𝖼𝗈𝗎𝗇𝗍𝗋𝗒 / 𝖳𝗈 𝗄𝗇𝗈𝗐 𝗍𝗁𝖾 𝖼𝗈𝗏𝗂𝖽 𝗂𝗇𝖿𝗈 𝗈𝖿 𝖺𝗇𝗒 𝖼𝗈𝗎𝗇𝗍𝗋𝗒            
@@ -64,15 +50,6 @@ Google's TTS engine by way of the gTTS library
 <b>𝖤𝗑𝖺𝗆𝗉𝗅𝖾𝗌:</b>
 - 𝖡𝖺𝗇 𝖺 𝗎𝗌𝖾𝗋 𝖿𝗈𝗋 𝗍𝗐𝗈 𝗁𝗈𝗎𝗋𝗌. 
 -> /tban @𝗎𝗌𝖾𝗋𝗇𝖺𝗆𝖾 𝟤𝗁
-
-𝖬𝖺𝖽𝖾 𝖻𝗒 @SakuraBotUpdates ❤️
-"""
-    JSON_TXT = """<b>𝖩𝗌𝗈𝗇:</b>
-𝖡𝗈𝗍 𝗋𝖾𝗍𝗎𝗋𝗇𝗌 𝗃𝗌𝗈𝗇 𝖿𝗈𝗋 𝖺𝗅𝗅 𝗋𝖾𝗉𝗅𝗂𝖾𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌 𝗐𝗂𝗍𝗁 /json. 
-<b>𝖥𝖾𝖺𝗍𝗎𝗋𝖾𝗌:</b>
-𝖬𝖾𝗌𝗌𝖺𝗀𝖾 𝖤𝖽𝗂𝗍𝗍𝗂𝗇𝗀 JSON
-𝖯𝗆 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 
-𝖦𝗋𝗈𝗎𝗉 𝖲𝗎𝗉𝗉𝗈𝗋𝗍
 
 𝖬𝖺𝖽𝖾 𝖻𝗒 @SakuraBotUpdates ❤️
 """
