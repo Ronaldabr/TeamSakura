@@ -411,9 +411,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Fun', callback_data='fun'),
             InlineKeyboardButton('𝖢𝗈𝗏𝗂𝖽', callback_data='covid'),
             InlineKeyboardButton('𝖲𝗈𝗇𝗀', callback_data='song')
-            ],[          
+            ],[
+            InlineKeyboardButton('𝖲𝗍𝖺tus', callback_data='stats')
+            ],[        
             InlineKeyboardButton('𝖢𝗅𝗈𝗌𝖾', callback_data='close_data'),          
-            InlineKeyboardButton('𝖲𝗍𝖺𝗍𝗌', callback_data='stats'),
             InlineKeyboardButton('𝖡𝖺𝖼𝗄', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
