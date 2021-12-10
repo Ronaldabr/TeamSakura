@@ -761,22 +761,10 @@ async def auto_filter(client, message):
             btn.append(
                 [InlineKeyboardButton(text="🗓 1/1",callback_data="pages")]
             )
-        imdb = await get_poster(search) if IMDB else None
-    if imdb:
-        cap = f"➡️Requested Movie : {search}\n👤Requested By {msg.from_user.mention}\n‌‌‌‌\nIMDb Data:\n\n🏷 Title: <a href={imdb['url']}>{imdb.get('title')}</a>\n🎭 Genres: {imdb.get('genres')}\n📆 Year: <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>\n🌟 Rating: <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10\n🖋 StoryLine: <code>{imdb.get('plot')} </code>"
-    else:
-        cap = "Here is what i found for your query {search}"
-    if imdb and imdb.get('poster'):
-        try:
-            await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-        except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
-            pic = imdb.get('poster')
-            poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-        except Exception as e:
-            print(e)
-            await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-    else:
-        await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-    if spoll:
-        await msg.message.delete()
+        imdb=await get_poster(search)
+        if imdb and imdb.get('poster'):
+            await message.reply_photo(photo=imdb.get('poster'), caption=f"**🏷 𝖳𝗂𝗍𝗅𝖾**: <a href={imdb['url']}>{imdb.get('title')}</a>\n**🎭 𝖦𝖾𝗇𝗋𝖾**: {imdb.get('genres')}\n**📆 𝖸𝖾𝖺𝗋**: <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>\n**🌟 𝖱𝖺𝗍𝗂𝗇𝗀**: <a href={imdb['url']}/ratings>{imdb.get('rating')}</a>/ 10 \ </code>", reply_markup=InlineKeyboardMarkup(btn))
+        elif imdb:
+            await message.reply_text(f"**🏷 𝖳𝗂𝗍𝗅𝖾**: <a href={imdb['url']}>{imdb.get('title')}</a>\n**🎭 𝖦𝖾𝗇𝗋𝖾**: {imdb.get('genres')}\n**📆 𝖸𝖾𝖺𝗋**: <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>\n**🌟 𝖱𝖺𝗍𝗂𝗇𝗀**: <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10 \ </code>", reply_markup=InlineKeyboardMarkup(btn))
+        else:
+            await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‎ </b>", reply_markup=InlineKeyboardMarkup(btn))
