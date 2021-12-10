@@ -401,10 +401,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('𝖥𝗂𝗅𝗍𝖾𝗋', callback_data='hud'),
-            InlineKeyboardButton('𝖨𝗆𝖽𝖻', callback_data='imbd'),
-            InlineKeyboardButton('𝖯𝗎𝗋𝗀𝖾', callback_data='purge')
-            ],[
-            InlineKeyboardButton('𝖳𝗀𝗋𝖺𝗉𝗁', callback_data='tgraph'),
+            InlineKeyboardButton('𝖨𝗆𝖽𝖻', callback_data='imbd')
+            ],[   
             InlineKeyboardButton('𝖬𝖾𝗆𝖾', callback_data='fun'),
             InlineKeyboardButton('𝖬𝗎𝗍𝖾', callback_data='mute')
             ],[
