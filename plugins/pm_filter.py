@@ -760,7 +760,10 @@ async def auto_filter(client, message):
             req = message.from_user.id if message.from_user else 0
             btn.append(
                 [InlineKeyboardButton(text=f"🗓 1/{round(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="MORE FILES »",callback_data=f"next_{req}_{key}_{offset}")]
-            )
+                ],
+                [
+                InlineKeyboardButton('𝖧𝖾𝗅𝗉', url=f"https://t.me/{temp.U_NAME}?start=Start")
+             )
         else:
             btn.append(
                 [InlineKeyboardButton(text="🗓 1/1",callback_data="pages")]
