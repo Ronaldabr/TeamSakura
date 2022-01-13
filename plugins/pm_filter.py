@@ -753,13 +753,6 @@ async def auto_filter(client, msg, spoll=False):
             if not files:
                 if SPELL_CHECK_REPLY:
                     return await advantage_spell_chok(msg)
-                else:
-                    return
-        else:
-            return
-    else:
-        message = msg.message.reply_to_message # msg will be callback query
-        search, files, offset, total_results = spoll
         if SINGLE_BUTTON:
             btn = [
                 [
