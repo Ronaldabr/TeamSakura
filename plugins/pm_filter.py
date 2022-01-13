@@ -749,7 +749,8 @@ async def auto_filter(client, message):
         search = message.text
         files, offset, total_results = await get_search_results(search.lower(), offset=0)
         if not files:
-            return
+        if SPELL_CHECK_REPLY:
+        return await advantage_spell_chok(msg)
 
         if SINGLE_BUTTON:
             btn = [
