@@ -720,6 +720,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
       )
    
+async def auto_filter(client, message):
+    if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
+        return
+    if 2 < len(message.text) < 100:
+        
+        search = message.text
+        files, offset, total_results = await get_search_results(search.lower(), offset=0)
+        if not files:
+            return
 
         if SINGLE_BUTTON:
             btn = [
