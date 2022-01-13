@@ -744,6 +744,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 async def auto_filter(client, msg, spoll=False):
     if not spoll:
         message = msg
+        if message.text.startswith("/"): return # ignore commands
         if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
             return
         if 2 < len(message.text) < 100:
@@ -754,6 +755,8 @@ async def auto_filter(client, msg, spoll=False):
                     return await advantage_spell_chok(msg)
                 else:
                     return
+        else:
+            return
     else:
         message = msg.message.reply_to_message # msg will be callback query
         search, files, offset, total_results = spoll
