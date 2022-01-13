@@ -19,6 +19,7 @@ from database.filters_mdb import(
 )
 
 BUTTONS = {}
+SPELL_CHECK = {}
 
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
