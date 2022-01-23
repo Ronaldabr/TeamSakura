@@ -764,14 +764,6 @@ async def auto_filter(client, message):
             btn.append(
                 [InlineKeyboardButton(text="🗓 1/1",callback_data="pages")]
              )
-filters = await db.get_filters(group_id, query)
-    
-    if filters:
-        results.append(
-                [
-                    InlineKeyboardButton("⚠️ ERROR CLICK HERE ⚠️", url="https://t.me/Mc_Linkez")
-                ]
-            )
 
         imdb=await get_poster(search)
         if imdb and imdb.get('poster'):
