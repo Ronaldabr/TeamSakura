@@ -17,7 +17,7 @@
 
 # Credits
 * `Base Repo Used In The Build - Eva Maria`
-* © [PaulWalker](https://telegram.dog/PaulWalker_TG)
+* © [Ronald](https://telegram.dog/PaulWalker_TG)
 * Powered By [XD_Botz](https://telegram.dog/xd_botz)
 * [Subin Ps](https://telegram.dog/subin_works)
 
